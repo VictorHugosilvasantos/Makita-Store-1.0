@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKITA STORE</title>
+
+    <link rel="icon" href="../imagens/icon1.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="animaçães.css">
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;400;600&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap-reboot.css">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+    <nav id="nav_esq">
+
+    <div id="logo">
+        <img src="../imagens/logo-tipo.png" alt="logo">
+    </div>
+
+    <!-- Ícone do menu (mobile) -->
+    <ul class="icone-menu">
+        <li class="menu"><ion-icon name="menu-outline"></ion-icon></li>
+        <li class="menuX"><ion-icon name="close-outline"></ion-icon></li>
+    </ul>
+
+    <!-- MENU PRINCIPAL -->
+    <ul class="menu_princinal">
+        <li><a href="./index.html"><strong>INICIO</strong></a></li>
+
+        <!-- DROPDOWN PRODUTOS -->
+        <li class="dropdown">
+            <a href="./produtos.html"><strong>PRODUTOS ▾</strong></a>
+
+            <ul class="dropdown-menu">
+                <li><a href="./produtos.html">Ferramentas Elétricas</a></li>
+                <li><a href="./produtos.html">Ferramentas Manuais</a></li>
+                <li><a href="./produtos.html">Acessórios</a></li>
+                <li><a href="./produtos.html">Equipamentos de Segurança</a></li>
+                <li><a href="./produtos.html">Ver Todos os Produtos</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#"><strong>LANÇAMENTOS</strong></a></li>
+        <li><a href="https://web.whatsapp.com/send?phone=5583996574644"><strong>CONTATO</strong></a></li>
+        <li><a href="#"><strong>QUEM SOMOS</strong></a></li>
+    </ul>
+
+<div id="user-login-area">
+    <div id="login-btn" class="user-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+    </div>
+
+    <div id="login-menu" class="login-menu">
+        <p id="login-email"></p>
+
+        <button id="btnLogin" class="login-menu-btn">Login</button>
+        <button id="btnLogout" class="logout-btn">Sair</button>
+    </div>
+</div>
+
+
+
+</nav>
+
+
+        <div class="chamada">
+            <h1>Makita Store</h1>
+            <h2>Qualidade, durabilidade e força para seu trabalho</h2>
+            <a href="#produtos-container">Ver Ofertas</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="homer">
+                <div class="homer-chat-container">
+                    <div class="action-buttons">
+                        <a href="#" class="btn-action" aria-label="WhatsApp">
+                            <img src="../imagens/whatsapp-brands-solid-full.svg">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="btn-action" aria-label="Telegram">
+                            <img src="../imagens/telegram-brands-solid-full.svg">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox" class="btn-action" aria-label="Email">
+                             <img src="../imagens/gmail.svg">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                 </div>
+                
+                <button class="homer-support-button" id="homerBtn" aria-label="Abrir opções de suporte">
+                    <img src="../imagens/homer-icon.png" alt="Homer Simpson Support">
+                    <span>Suporte</span>
+                </button>
+                </div>
+        
+            </div>
+        
+                <section class="sobre">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="../imagens/oferta1.webp" class="bd-placeholder-img rounded-circle" width="300" height="300"></img>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="../imagens/oferta2.jpg" class="bd-placeholder-img rounded-circle" width="300" height="300"></img>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="../imagens/oferta3.webp" class="bd-placeholder-img rounded-circle" width="300" height="300"></img>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="solução_produto">
+                    <h2> <strong>PRODUTOS</strong></h2>
+                    <h2>Adiquira uma Makita para chamar de sua:</h2>
+                    <div class="carousel-wrapper">
+        <button class="carousel-btn btn-prev" id="btn-prev">&#10094;</button>
+        
+        <div id="produtos-container">
+            </div>
+
+        <button class="carousel-btn btn-next" id="btn-next">&#10095;</button>
+    </div>
+</section>
+                <section class="solução">
+                    <h2> <strong>As Melhores Ferramentas para o Seu Trabalho Qualidade e Desempenho Garantidos!</strong></h2>
+                        <div class="solução-mestre">    
+                            <div class="solução-texto">
+                                <p>Na MAKITA STORE, você encontra as melhores ferramentas elétricas e manuais das marcas mais confiáveis do mercado, como Makita, Bosch, DeWalt, Stanley e muito mais.
+        Seja para uso profissional ou doméstico, temos tudo o que você precisa para realizar seus projetos com precisão, potência e segurança.
+                                </p>
+                            </div>
+                            <div class="solução-img">
+                                <img src="../imagens/R.jpg" alt="solução-img">
+                            </div>
+                        </div>
+                </section>
+        
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="../imagens/footer-tipo.png" alt="Logo">
+            </div>
+            <div class="footer-info">
+                <nav class="nav-footer">
+                    <ul class="menu-principal">
+                            <li><a href="./produtos.html">Ferramentas Elétricas</a></li>
+                            <li><a href="./produtos.html">Ferramentas Manuais</a></li>
+                            <li><a href="./produtos.html">Acessórios</a></li>
+                            <li><a href="./produtos.html">Equipamentos de Segurança</a></li>
+                            <li><a href="./produtos.html">Ver Todos os Produtos</a></li>
+                            <li><a href="#"><strong>lançamentos</strong></a></li>
+                            <li><a href="https://web.whatsapp.com/send?phone=5583996574644"><strong>CONTATO</strong></a></li>
+                            <li><a href="#"><strong>Quem somos</strong></a></li>
+                        
+                    </ul>
+                </nav>
+    
+                <div class="cartao">
+                    <span>Parcelamos em até 12x</span>
+                    <div class="imagem-cartao-footer">
+                        <img src="../imagens/footer-cartoes.png" alt="Cartões aceitos">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="autorais-footer">
+            <span>© 2025 MAKITA STORE. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js" integrity="sha512-O5YCLUxCY2OBc4rfpnKUIgE4LGuCiW8CrJ7ty4hvkBAAKUOnlbomEFWd3a6ruRnFvO3LG2wiaGiJ1heOvdppvA==" crossorigin="anonymous"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="../scripts/pagians.js"></script>
+    <script src="../scripts/animacao.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="produtos.js"></script>
+
+ <script>
+const loginIcon = document.getElementById("login-btn");
+const loginMenu = document.getElementById("login-menu");
+
+const loginEmail = document.getElementById("login-email");
+const btnLogin = document.getElementById("btnLogin");
+const btnLogout = document.getElementById("btnLogout");
+
+function atualizarLogin() {
+    const email = localStorage.getItem("userEmail");
+
+    if (email) {
+        loginEmail.textContent = email;
+        btnLogin.style.display = "block";
+        btnLogout.style.display = "block";
+    } else {
+        loginEmail.textContent = "Bem-vindo!";
+        btnLogin.style.display = "block";
+        btnLogout.style.display = "block";
+    }
+}
+
+atualizarLogin();
+
+// 👉 Abrir/fechar menu ao clicar no ícone
+loginIcon.addEventListener("click", () => {
+    loginMenu.style.display =
+        loginMenu.style.display === "block" ? "none" : "block";
+});
+
+// 👉 Fechar ao clicar fora
+document.addEventListener("click", (e) => {
+    if (!loginMenu.contains(e.target) && !loginIcon.contains(e.target)) {
+        loginMenu.style.display = "none";
+    }
+});
+
+// 👉 Botão LOGIN — agora funciona com seu caminho
+btnLogin.addEventListener("click", () => {
+    window.location.href = "../fazer-login/login.html";
+});
+
+// 👉 Botão SAIR
+btnLogout.addEventListener("click", () => {
+    localStorage.removeItem("userEmail");
+    atualizarLogin();
+    loginMenu.style.display = "none";
+    window.location.href = "index.html";
+});
+
+</script>
+
+</body>
+</html>

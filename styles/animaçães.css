@@ -1,0 +1,38 @@
+/* animaçãoes para pagina homem*/
+
+@keyframes heardeh1-moverparadireita{
+    0%{
+        opacity: 0%;
+        transform: translateX(-75px);
+    }
+    70%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes  heardeh2-moverparadireita{
+    0%{
+        opacity: 0%;
+        transform: translateX(50px);
+    }
+    70%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes heardea-moverparadireita{
+    0%{
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

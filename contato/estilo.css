@@ -1,0 +1,30 @@
+   /* COR DO FUNDO E CENTRALIZAÇÃO */
+    body {
+      background-color: #00849B !important; /* força a cor sobre o Bootstrap */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* CAIXA DO FORMULÁRIO */
+    main.form-signin {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* BOTÃO COM A MESMA COR DO FUNDO */
+    .btn-primary {
+      background-color: #00849B !important;
+      border: none !important;
+    }
+
+    .btn-primary:hover {
+      background-color: #006c80 !important;
+    }

@@ -1,0 +1,407 @@
+/*----------------------*/
+/*-       hearder      -*/
+/*----------------------*/
+
+/*----------------------*/
+/*- header nav  menu   -*/
+/*----------------------*/
+
+/* SEU CÓDIGO ORIGINAL DO MENU FOI MANTIDO INTACTO */
+@media screen and (max-width:1200px) {
+    header{
+        max-width: 100%;/* aqui ele vai acuoar mo maximo 100% da tela em relação a imagen*/
+        height: 90vh;
+        background-image: linear-gradient(rgba(0,0,0,1.7),rgba(0,0,0,0.2)), url('../imagens/header.capa.media.jpg') ;/* colocando a imagen de fundo no cabeçario*/
+        background-repeat: no-repeat;/* isso e para a imagens nao se repetir */
+        background-position: center center;/*isso vai centraliza a imagens no centro*/
+        background-size: cover; /* é usada para que a imagen possa ser vista completa ou serve mais vistas */
+    }
+    /*----------------------*/
+    /*-      nav bar       -*/
+    /*----------------------*/
+    header nav /*nav_esq*/ {
+        justify-content: space-between;
+    }    
+    header nav /*nav_esq*/ .icone-menu {
+        display: flex; /* Isso vai trazer o menu hambúrguer de volta */
+    }
+
+    header nav /*nav_esq*/ .icone-menu .menuX {
+        display: none; /* Inicialmente, o "X" está escondido */
+    }
+
+    /*----------------------*/
+    /*-        MENU        -*/
+    /*----------------------*/
+    header nav /*nav_esq*/ .menu_princinal {
+        display: none; /* Inicialmente, o menu estará escondido */
+        flex-direction: column; /* Isso vai deixar o menu como uma lista (um abaixo do outro) */
+        width: 50%; /* Define a largura do menu */
+        height: 76.4vh; /* O menu ocupará 76.4% da altura da tela */
+        background: linear-gradient(180deg, #023a4d 0%, #005f6b 100%);
+        border-radius: 4px;
+        padding-top: 0.5rem;
+        position: absolute;
+        top: 5.5rem; /* Posicionamento do menu em relação ao topo da tela */
+        right: 0; /* Posiciona o menu à direita */
+        z-index: 2000; /* Garantir que o menu fique acima de outros elementos */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        
+        transform: translateX(100%); /* Esconde o menu fora da tela à direita */
+
+        /* Animação */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    header nav /*nav_esq*/ .menu_princinal.active {
+        display: flex; /* Quando o menu estiver ativo, será mostrado */
+        transform: translateX(0); /* Exibe o menu da direita para a esquerda */
+    }
+
+    header nav /*nav_esq*/ .menu_princinal li {
+        margin: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    header nav /*nav_esq*/ .menu_princinal li a {
+        font-size: 22px; /* Tamanho da fonte */
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    /* Exibe o ícone de hambúrguer quando o menu estiver fechado */
+    header nav /*nav_esq*/ .icone-menu .menu {
+        display: flex;
+    }
+
+    /* Esconde o ícone "X" quando o menu estiver fechado */
+    header nav /*nav_esq*/ .icone-menu .menuX {
+        display: none;
+    }
+
+    /* Exibe o ícone "X" quando o menu estiver aberto */
+    header nav /*nav_esq*/ .menu_princinal.active + .icone-menu .menuX {
+        display: flex;
+    }
+}
+
+/*----------------------*/
+/*-       foooter      -*/
+/*----------------------*/
+
+/* ESTA PARTE FOI SUBSTITUÍDA PELO CÓDIGO DO 'mobile1.css',
+  QUE É MAIS LIMPO E EFICIENTE.
+*/
+@media (max-width: 950px){
+
+    footer .container-footer{
+        flex-direction: column;
+    }
+
+    footer .container-footer .footer-logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Ajuste da margem superior do logo */
+    }
+
+    footer .container-footer .footer-logo img{
+        max-width: 180px; /* Tamanho máximo do logo */
+    }
+
+    footer .footer-info{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer .cartao{
+        margin-top: 20px;
+    }
+
+    footer .cartao .imagem-cartao-footer img{
+        max-width: 180px; /* Tamanho máximo dos cartões */
+    }
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE GERAL (Móveis e Tablets)  MAX: 768px      */
+/* ================================================= */
+@media (max-width: 768px) {
+    
+   
+    /* 2. IMAGENS DE OFERTA: Reduz para caber na tela vertical */
+    section.sobre div.col-lg-4 img {
+        width: 220px !important; /* Override no tamanho fixo do HTML */
+        height: 220px !important;
+        margin-bottom: 20px;
+    }
+
+    /* 3. SEÇÃO TEXTO + FOTO: Coloca a imagem em cima do texto */
+    section.solução div.solução-mestre {
+        flex-direction: column-reverse; 
+        align-items: center;
+    }
+    
+    section.solução div.solução-mestre div.solução-texto {
+        text-align: center; /* Texto centralizado fica melhor no mobile */
+        padding: 0 20px;
+    }
+
+    /* 4. CARROSSEL (Mantendo sua configuração original ajustada) */
+    .carousel-btn {
+        display: flex; 
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-prev { left: 5px; } 
+    .btn-next { right: 5px; }
+    
+    .carousel-wrapper {
+        padding: 0; 
+        width: 100%; /* Garante que use a largura total */
+    }
+
+    #produtos-container {
+        padding: 20px 10px; 
+        gap: 15px;
+    }
+
+    .card-produto {
+        min-width: 85vw; /* Card ocupa 85% da largura do celular */
+        max-width: 85vw;
+    }
+
+    /* 5. FOOTER: Organiza em coluna */
+    footer .container-footer .footer-info {
+        flex-direction: column;
+        width: 95%;
+    }
+    
+    footer .container-footer .footer-logo {
+        margin-top: 0;
+    }
+}
+
+
+/* ========================================== */
+/* RESPONSIVIDADE PARA CELULARES (MAX 480px)  */
+/* ========================================== */
+
+@media (max-width: 480px) {
+
+    /* 1. HEADER E MENU */
+    header {
+        min-height: 80vh; /* Diminui um pouco a altura da capa */
+        background-position: center top; /* Foca a imagem mais no topo */
+    }
+
+   
+    header nav div#logo {
+        margin-left: 0; /* Centraliza o logo removendo a margem esquerda */
+        margin-bottom: 15px;
+        transform: scale(0.9); /* Diminui um pouco o logo */
+    }
+
+    header nav .menu_princinal {
+        margin-left: 0;
+        justify-content: center;
+        gap: 15px; /* Espaço entre os links */
+    }
+    
+    /* Ajuste dos links do menu para não quebrarem feio */
+    header nav .menu_princinal li {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 0.9rem; /* Texto menor */
+    }
+
+    /* 2. TEXTOS DA CHAMADA (HERO) */
+    header div.chamada h1 {
+        font-size: 38px; /* Tamanho fixo para não ficar gigante */
+        line-height: 1.1;
+    }
+
+    header div.chamada h2 {
+        font-size: 18px;
+        margin-bottom: 30px;
+        padding: 0 20px; /* Margem lateral para o texto não colar na borda */
+    }
+
+    header div.chamada a {
+        padding: 12px 30px; /* Botão um pouco menor */
+        width: 80%; /* Botão ocupa quase toda a largura para facilitar o toque */
+    }
+
+    /* 3. SEÇÃO SOBRE (FOTOS REDONDAS) */
+    /* Força as imagens a ficarem empilhadas e não achatadas */
+    section.sobre .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.sobre div.col-lg-4 {
+        margin-bottom: 30px;
+    }
+
+    section.sobre div.col-lg-4 img {
+        width: 250px !important; /* Reduz um pouco a imagem redonda */
+        height: 250px !important;
+    }
+
+    /* 4. SEÇÃO TEXTO + IMAGEM (SOLUÇÃO) */
+    section.solução div.solução-mestre {
+        flex-direction: column-reverse; /* Coloca a imagem EM CIMA do texto no mobile */
+    }
+
+    section.solução div.solução-mestre div.solução-texto {
+        max-width: 100%;
+        padding: 0 20px; /* Espaçamento lateral */
+        text-align: center; /* Texto centralizado fica melhor no mobile */
+    }
+
+    section.solução div.solução-mestre div.solução-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section.solução div.solução-mestre div.solução-texto p {
+        width: 100%;
+        font-size: 16px; /* Leitura confortável */
+    }
+
+    /* 5. CARROSSEL */
+    .card-produto {
+        min-width: 90vw; /* Card ocupa 90% da tela do celular */
+        max-width: 90vw;
+    }
+    
+    .carousel-btn {
+        width: 40px; 
+        height: 40px;
+        background-color: rgba(0,0,0,0.7); /* Mais visível */
+    }
+
+    /* 6. RODAPÉ (FOOTER) */
+    footer .container-footer .footer-logo {
+        margin-top: 0; /* Ajuste de posicionamento */
+        margin-bottom: 20px;
+    }
+
+    footer .container-footer .footer-info {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .container-footer .footer-info .nav-footer ul.menu-principal {
+        align-items: center; /* Centraliza os links */
+        padding: 0;
+    }
+
+    /* 7. WIDGET DO HOMER */
+    /* Diminuir para não atrapalhar a navegação */
+    .homer-support-button img {
+        width: 110px; 
+    }
+    .homer-chat-container {
+        bottom: 10px;
+        right: 10px;
+    }
+    /* 1. Força o menu a ser uma gaveta lateral com rolagem */
+    header nav .menu_princinal {
+        /* Posicionamento fixo para ficar por cima de tudo */
+        position: fixed; 
+        top: 0;
+        right: 0; /* Alinha à direita (ou mude para left: 0 se preferir) */
+        
+        /* Tamanho */
+        width: 75%; /* Ocupa 75% da largura da tela */
+        height: 100vh; /* Ocupa 100% da ALTURA da tela (Importante) */
+        
+        /* Aparência */
+        background: linear-gradient(180deg, #023a4d 0%, #005f6b 100%);
+        flex-direction: column;
+        justify-content: flex-start; /* Alinha itens no topo */
+        padding-top: 60px; /* Espaço para não ficar em cima do botão fechar */
+        padding-bottom: 50px; /* Espaço extra no final */
+        
+        /* O SEGREDO PARA NÃO CORTAR: */
+        overflow-y: auto; /* Cria rolagem SE a lista for grande demais */
+        z-index: 9999; /* Garante que fique na frente de tudo */
+        
+        /* Sombra para destacar do fundo */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* 2. Ajuste dos itens da lista para não quebrarem texto */
+    header nav .menu_princinal li {
+        width: 100%;
+        margin: 0;
+        padding: 15px 20px; /* Mais área de toque */
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Divisor sutil */
+        text-align: left;
+    }
+
+    header nav .menu_princinal li a {
+        font-size: 18px;
+        display: block; /* O link ocupa toda a linha */
+    }
+
+    /* 3. Garante que o Dropdown (Submenu) não corte lateralmente */
+    header nav .menu_princinal .dropdown-menu {
+        position: static; /* No mobile, o submenu fica dentro do fluxo, não flutuando */
+        width: 100%;
+        background-color: rgba(0,0,0,0.2); /* Fundo um pouco mais escuro */
+        box-shadow: none;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+        display: none; /* JS deve controlar isso, ou deixe visivel se preferir sempre aberto */
+        padding-left: 20px; /* Indentação para saber que é submenu */
+    }
+
+    /* Exibe o submenu quando passa o mouse ou clica (dependendo do seu JS) */
+    header nav .menu_princinal li.dropdown:hover .dropdown-menu,
+    header nav .menu_princinal li.dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+    
+    /* 4. Botão de Fechar (X) e Menu Hamburguer */
+    header nav .icone-menu {
+        display: block; /* Garante que o ícone apareça */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10000; /* Acima do menu */
+    }
+
+}
+/*login*/
+/* Faz o botão Login descer para o menu em telas pequenas */
+@media (max-width: 768px) {
+    #user-login-area {
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        margin: 0;
+        z-index: 3000;
+    }
+
+    #login-btn {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+/* Ajuste para o botão não sumir atrás do menu */
+@media (max-width: 768px) {
+    #user-login-area {
+        z-index: 9999 !important;
+    }
+}
